@@ -6,6 +6,11 @@ References:
 import React from 'react';
 import DeckGL from '@deck.gl/react';
 import {LineLayer} from '@deck.gl/layers';
+import {Map} from 'react-map-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
+import apiKey from './api-key.json';
+
+const MAPBOX_ACCESS_TOKEN = apiKey.key;
 
 // Viewport settings
 const INITIAL_VIEW_STATE = {
@@ -27,10 +32,18 @@ function App() {
     new LineLayer({id: 'line-layer', data})
   ];
 
+  const style = 'mapbox://styles/mapbox/light-v9'
+
   return <DeckGL
     initialViewState={INITIAL_VIEW_STATE}
     controller={true}
-    layers={layers} />
+    layers={layers}
+    >
+      <Map
+        mapboxAccessToken={MAPBOX_ACCESS_TOKEN}
+        mapStyle={style}
+      />
+    </DeckGL>
 }
 
 export default App;
