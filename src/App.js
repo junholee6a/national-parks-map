@@ -5,7 +5,7 @@ References:
 
 import React from 'react';
 import DeckGL from '@deck.gl/react';
-import {LineLayer} from '@deck.gl/layers';
+import { ScatterplotLayer } from '@deck.gl/layers';
 import {Map} from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import apiKey from './api-key.json';
@@ -21,15 +21,37 @@ const INITIAL_VIEW_STATE = {
   bearing: 0
 };
 
-// Data to be used by the LineLayer
+// Data to be used by the ScatterplotLayer
 const data = [
-  {sourcePosition: [-122.41669, 37.7853], targetPosition: [-122.41669, 37.781]}
+  {
+    name: 'Acadia',
+    location: [-68.21, 44.35]
+  },
+  {
+    name: 'American Samoa',
+    location: [-170.68, -14.25]
+  }
 ];
 
 // DeckGL react component
 function App() {
   const layers = [
-    new LineLayer({id: 'line-layer', data})
+    new ScatterplotLayer({
+      id: 'scatterplot-layer',
+      data,
+      pickable: true,
+      opacity: 0.8,
+      stroked: true,
+      filled: true,
+      radiusScale: 100,
+      radiusMinPixels: 1,
+      radiusMaxPixels: 100,
+      lineWidthMinPixels: 1,
+      getPosition: d => d.location,
+      getRadius: d => 90,
+      getFillColor: d => [88, 129, 87],
+      getLineColor: d => [0, 0, 0]
+    })
   ];
 
   const style = 'mapbox://styles/mapbox/light-v9'
@@ -38,8 +60,10 @@ function App() {
     initialViewState={INITIAL_VIEW_STATE}
     controller={true}
     layers={layers}
+    getTooltip={({object}) => object && `${object.name}`}
     >
       <Map
+        reuseMaps
         mapboxAccessToken={MAPBOX_ACCESS_TOKEN}
         mapStyle={style}
       />
