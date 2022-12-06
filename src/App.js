@@ -25,11 +25,13 @@ const INITIAL_VIEW_STATE = {
 const data = [
   {
     name: 'Acadia',
-    location: [-68.21, 44.35]
+    location: [-68.21, 44.35],
+    visitors: 4_069_098
   },
   {
     name: 'American Samoa',
-    location: [-170.68, -14.25]
+    location: [-170.68, -14.25],
+    visitors: 8_495
   }
 ];
 
@@ -44,15 +46,20 @@ function App() {
       stroked: true,
       filled: true,
       radiusScale: 100,
-      radiusMinPixels: 1,
+      radiusMinPixels: 2,
       radiusMaxPixels: 100,
       lineWidthMinPixels: 1,
-      getPosition: d => d.location,
-      getRadius: d => 90,
-      getFillColor: d => [88, 129, 87],
-      getLineColor: d => [0, 0, 0]
+      getPosition: park => park.location,
+      getRadius: park => Math.sqrt(park.visitors),
+      getFillColor: park => [88, 129, 87],
+      getLineColor: park => [0, 0, 0]
     })
   ];
+
+  function getTooltip({object}) {
+    return object && `${object.name}\n2021 visitors: ${object.visitors.toLocaleString('en-US')}`;
+  }
+  // const getTooltip = ({object}) => object && `${object.name}`;
 
   const style = 'mapbox://styles/mapbox/light-v9'
 
@@ -60,7 +67,7 @@ function App() {
     initialViewState={INITIAL_VIEW_STATE}
     controller={true}
     layers={layers}
-    getTooltip={({object}) => object && `${object.name}`}
+    getTooltip={getTooltip}
     >
       <Map
         reuseMaps
