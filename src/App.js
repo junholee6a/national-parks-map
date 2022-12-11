@@ -9,6 +9,7 @@ import { ScatterplotLayer } from '@deck.gl/layers';
 import {Map} from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import apiKey from './api-key.json';
+import data from './national-parks.json'
 
 const MAPBOX_ACCESS_TOKEN = apiKey.key;
 
@@ -20,20 +21,6 @@ const INITIAL_VIEW_STATE = {
   pitch: 0,
   bearing: 0
 };
-
-// Data to be used by the ScatterplotLayer
-const data = [
-  {
-    name: 'Acadia',
-    location: [-68.21, 44.35],
-    visitors: 4_069_098
-  },
-  {
-    name: 'American Samoa',
-    location: [-170.68, -14.25],
-    visitors: 8_495
-  }
-];
 
 // DeckGL react component
 function App() {
@@ -59,7 +46,6 @@ function App() {
   function getTooltip({object}) {
     return object && `${object.name}\n2021 visitors: ${object.visitors.toLocaleString('en-US')}`;
   }
-  // const getTooltip = ({object}) => object && `${object.name}`;
 
   const style = 'mapbox://styles/mapbox/light-v9'
 

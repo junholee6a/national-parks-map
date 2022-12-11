@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Acadia",
+        "location": [-68.21, 44.35],
+        "visitors": 4069098
+    },
+    {
+        "name": "American Samoa",
+        "location": [-170.68, -14.25],
+        "visitors": 8495
+    }
+]
