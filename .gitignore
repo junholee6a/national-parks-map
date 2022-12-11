@@ -24,3 +24,7 @@ yarn-error.log*
 
 # api key
 api-key.json
+
+# Wikipedia article HTML file
+# from https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States
+wikipedia-article.html
