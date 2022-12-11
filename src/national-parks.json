@@ -1,12 +1,506 @@
 [
     {
         "name": "Acadia",
-        "location": [-68.21, 44.35],
+        "location": [
+            -68.21,
+            44.35
+        ],
         "visitors": 4069098
     },
     {
         "name": "American Samoa",
-        "location": [-170.68, -14.25],
+        "location": [
+            -170.68,
+            -14.25
+        ],
         "visitors": 8495
+    },
+    {
+        "name": "Arches",
+        "location": [
+            -109.57,
+            38.68
+        ],
+        "visitors": 1806865
+    },
+    {
+        "name": "Badlands",
+        "location": [
+            -102.5,
+            43.75
+        ],
+        "visitors": 1224226
+    },
+    {
+        "name": "Big Bend",
+        "location": [
+            -103.25,
+            29.25
+        ],
+        "visitors": 581220
+    },
+    {
+        "name": "Biscayne",
+        "location": [
+            -80.08,
+            25.65
+        ],
+        "visitors": 705655
+    },
+    {
+        "name": "Black Canyon of the Gunnison",
+        "location": [
+            -107.72,
+            38.57
+        ],
+        "visitors": 308910
+    },
+    {
+        "name": "Bryce Canyon",
+        "location": [
+            -112.18,
+            37.57
+        ],
+        "visitors": 2104600
+    },
+    {
+        "name": "Canyonlands",
+        "location": [
+            -109.93,
+            38.2
+        ],
+        "visitors": 911594
+    },
+    {
+        "name": "Capitol Reef",
+        "location": [
+            -111.17,
+            38.2
+        ],
+        "visitors": 1405353
+    },
+    {
+        "name": "Carlsbad Caverns",
+        "location": [
+            -104.44,
+            32.17
+        ],
+        "visitors": 349244
+    },
+    {
+        "name": "Channel Islands",
+        "location": [
+            -119.42,
+            34.01
+        ],
+        "visitors": 319252
+    },
+    {
+        "name": "Congaree",
+        "location": [
+            -80.78,
+            33.78
+        ],
+        "visitors": 215181
+    },
+    {
+        "name": "Crater Lake",
+        "location": [
+            -122.1,
+            42.94
+        ],
+        "visitors": 647751
+    },
+    {
+        "name": "Cuyahoga Valley",
+        "location": [
+            -81.55,
+            41.24
+        ],
+        "visitors": 2575275
+    },
+    {
+        "name": "Death Valley",
+        "location": [
+            -116.82,
+            36.24
+        ],
+        "visitors": 1146551
+    },
+    {
+        "name": "Denali",
+        "location": [
+            -150.5,
+            63.33
+        ],
+        "visitors": 229521
+    },
+    {
+        "name": "Dry Tortugas",
+        "location": [
+            -82.87,
+            24.63
+        ],
+        "visitors": 83817
+    },
+    {
+        "name": "Everglades",
+        "location": [
+            -80.93,
+            25.32
+        ],
+        "visitors": 942130
+    },
+    {
+        "name": "Gates of the Arctic",
+        "location": [
+            -153.3,
+            67.78
+        ],
+        "visitors": 7362
+    },
+    {
+        "name": "Gateway Arch",
+        "location": [
+            -90.19,
+            38.63
+        ],
+        "visitors": 1145081
+    },
+    {
+        "name": "Glacier",
+        "location": [
+            -114.0,
+            48.8
+        ],
+        "visitors": 3081656
+    },
+    {
+        "name": "Glacier Bay",
+        "location": [
+            -137.0,
+            58.5
+        ],
+        "visitors": 89768
+    },
+    {
+        "name": "Grand Canyon",
+        "location": [
+            -112.14,
+            36.06
+        ],
+        "visitors": 4532677
+    },
+    {
+        "name": "Grand Teton",
+        "location": [
+            -110.8,
+            43.73
+        ],
+        "visitors": 3885230
+    },
+    {
+        "name": "Great Basin",
+        "location": [
+            -114.3,
+            38.98
+        ],
+        "visitors": 144875
+    },
+    {
+        "name": "Great Sand Dunes",
+        "location": [
+            -105.51,
+            37.73
+        ],
+        "visitors": 602613
+    },
+    {
+        "name": "Great Smoky Mountains",
+        "location": [
+            -83.53,
+            35.68
+        ],
+        "visitors": 14161548
+    },
+    {
+        "name": "Guadalupe Mountains",
+        "location": [
+            -104.87,
+            31.92
+        ],
+        "visitors": 243291
+    },
+    {
+        "name": "Haleakal\u0101",
+        "location": [
+            -156.17,
+            20.72
+        ],
+        "visitors": 853181
+    },
+    {
+        "name": "Hawai\u02bbi Volcanoes",
+        "location": [
+            -155.2,
+            19.38
+        ],
+        "visitors": 1262747
+    },
+    {
+        "name": "Hot Springs",
+        "location": [
+            -93.05,
+            34.51
+        ],
+        "visitors": 2162884
+    },
+    {
+        "name": "Indiana Dunes",
+        "location": [
+            -87.0524,
+            41.6533
+        ],
+        "visitors": 3177210
+    },
+    {
+        "name": "Isle Royale",
+        "location": [
+            -88.55,
+            48.1
+        ],
+        "visitors": 25844
+    },
+    {
+        "name": "Joshua Tree",
+        "location": [
+            -115.9,
+            33.79
+        ],
+        "visitors": 3064400
+    },
+    {
+        "name": "Katmai",
+        "location": [
+            -155.0,
+            58.5
+        ],
+        "visitors": 24764
+    },
+    {
+        "name": "Kenai Fjords",
+        "location": [
+            -149.65,
+            59.92
+        ],
+        "visitors": 411782
+    },
+    {
+        "name": "Kings Canyon",
+        "location": [
+            -118.55,
+            36.8
+        ],
+        "visitors": 562918
+    },
+    {
+        "name": "Kobuk Valley",
+        "location": [
+            -159.28,
+            67.55
+        ],
+        "visitors": 11540
+    },
+    {
+        "name": "Lake Clark",
+        "location": [
+            -153.42,
+            60.97
+        ],
+        "visitors": 18278
+    },
+    {
+        "name": "Lassen Volcanic",
+        "location": [
+            -121.51,
+            40.49
+        ],
+        "visitors": 359635
+    },
+    {
+        "name": "Mammoth Cave",
+        "location": [
+            -86.1,
+            37.18
+        ],
+        "visitors": 515774
+    },
+    {
+        "name": "Mesa Verde",
+        "location": [
+            -108.49,
+            37.18
+        ],
+        "visitors": 548477
+    },
+    {
+        "name": "Mount Rainier",
+        "location": [
+            -121.75,
+            46.85
+        ],
+        "visitors": 1670063
+    },
+    {
+        "name": "New River Gorge",
+        "location": [
+            -81.08,
+            38.07
+        ],
+        "visitors": 1682720
+    },
+    {
+        "name": "North Cascades",
+        "location": [
+            -121.2,
+            48.7
+        ],
+        "visitors": 17855
+    },
+    {
+        "name": "Olympic",
+        "location": [
+            -123.5,
+            47.97
+        ],
+        "visitors": 2718925
+    },
+    {
+        "name": "Petrified Forest",
+        "location": [
+            -109.78,
+            35.07
+        ],
+        "visitors": 590334
+    },
+    {
+        "name": "Pinnacles",
+        "location": [
+            -121.16,
+            36.48
+        ],
+        "visitors": 348857
+    },
+    {
+        "name": "Redwood",
+        "location": [
+            -124.0,
+            41.3
+        ],
+        "visitors": 435879
+    },
+    {
+        "name": "Rocky Mountain",
+        "location": [
+            -105.58,
+            40.4
+        ],
+        "visitors": 4434848
+    },
+    {
+        "name": "Saguaro",
+        "location": [
+            -110.5,
+            32.25
+        ],
+        "visitors": 1079786
+    },
+    {
+        "name": "Sequoia",
+        "location": [
+            -118.68,
+            36.43
+        ],
+        "visitors": 1059548
+    },
+    {
+        "name": "Shenandoah",
+        "location": [
+            -78.35,
+            38.53
+        ],
+        "visitors": 1592312
+    },
+    {
+        "name": "Theodore Roosevelt",
+        "location": [
+            -103.45,
+            46.97
+        ],
+        "visitors": 796085
+    },
+    {
+        "name": "Virgin Islands",
+        "location": [
+            -64.73,
+            18.33
+        ],
+        "visitors": 323999
+    },
+    {
+        "name": "Voyageurs",
+        "location": [
+            -92.88,
+            48.5
+        ],
+        "visitors": 243042
+    },
+    {
+        "name": "White Sands",
+        "location": [
+            -106.17,
+            32.78
+        ],
+        "visitors": 782469
+    },
+    {
+        "name": "Wind Cave",
+        "location": [
+            -103.48,
+            43.57
+        ],
+        "visitors": 709001
+    },
+    {
+        "name": "Wrangell\u2013St.\u00a0Elias",
+        "location": [
+            -142.0,
+            61.0
+        ],
+        "visitors": 50189
+    },
+    {
+        "name": "Yellowstone",
+        "location": [
+            -110.5,
+            44.6
+        ],
+        "visitors": 4860242
+    },
+    {
+        "name": "Yosemite",
+        "location": [
+            -119.5,
+            37.83
+        ],
+        "visitors": 3287595
+    },
+    {
+        "name": "Zion",
+        "location": [
+            -113.05,
+            37.3
+        ],
+        "visitors": 5039835
     }
 ]
