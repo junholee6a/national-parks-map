@@ -1,4 +1,8 @@
 /*
+Requires a file named api-key.json, containing a 
+Mapbox API key in format:
+{"key":"API_KEY_GOES_HERE"}
+
 References:
 - Followed this tutorial: https://deck.gl/docs/get-started/using-with-react
 */
