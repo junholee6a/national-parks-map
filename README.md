@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# National Parks Map
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Program screenshot](./screenshot.png)
 
-## Available Scripts
+This web app displays the 63 U.S. national parks on a map. Larger circles indicate that the park had more visitors in 2021. The base map is from Mapbox and the park data is from [Wikipedia](https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States).
 
-In the project directory, you can run:
+## How to Run the App
+Download this repository and get an API key from [Mapbox](https://www.mapbox.com/). Create a file, src/api-key.json, and add the following to its content with your own API key:\
+`{"key":"API_KEY_GOES_HERE"}`
 
-### `npm start`
+Then run in terminal:\
+`npm install`\
+`npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How to Run the Scraper
+To avoid straining Wikipedia servers, this scraper does not make any HTTP requests. Instead, you must download the HTML file of [this Wikipedia article](https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States) which contains a list of national parks. Then, rename it to `wikipedia-article.html` and move it to the `scrape-data` folder.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+`scrape-data/extract-park-data.py` is a script which reads the content of `scrape-data/wikipedia-article.html` and extracts national park data from it to generate `src/national-parks.json`, which is read directly by the app. Since `src/national-parks.json` has already been generated, you do not need to run the scraper to run the mapping app. The article was downloaded on Decmber 10, 2022, to generate the existing data.
 
-### `npm test`
+Install Python dependencies:\
+`pip install -r scrape-data/requirements.txt`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Run the Python script to generate src/national-parks.json:\
+`python scrape-data/extract-park-data.py`
 
-### `npm run build`
+## References
+Followed this tutorial: https://deck.gl/docs/get-started/using-with-react
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Deck.gl ScatterplotLayer documentation: https://deck.gl/docs/api-reference/layers/scatterplot-layer
