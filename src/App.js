@@ -22,7 +22,7 @@ const MAPBOX_ACCESS_TOKEN = apiKey.key;
 const INITIAL_VIEW_STATE = {
   longitude: -122.41669,
   latitude: 37.7853,
-  zoom: 13,
+  zoom: 2.7,
   pitch: 0,
   bearing: 0
 };
