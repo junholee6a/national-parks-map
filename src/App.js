@@ -4,7 +4,7 @@ Mapbox API key in format:
 {"key":"API_KEY_GOES_HERE"}
 
 References:
-- Followed this tutorial: https://deck.gl/docs/get-started/using-with-react
+- Setting up Deck.gl with React: https://deck.gl/docs/get-started/using-with-react
 - Deck.gl ScatterplotLayer: https://deck.gl/docs/api-reference/layers/scatterplot-layer
 */
 

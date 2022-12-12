@@ -24,6 +24,6 @@ Run the Python script to generate src/national-parks.json:\
 `python scrape-data/extract-park-data.py`
 
 ## References
-Followed this tutorial: https://deck.gl/docs/get-started/using-with-react
+Setting up Deck.gl with React: https://deck.gl/docs/get-started/using-with-react
 
 Deck.gl ScatterplotLayer documentation: https://deck.gl/docs/api-reference/layers/scatterplot-layer
